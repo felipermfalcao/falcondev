@@ -1,0 +1,115 @@
+{
+  "title": "Projetos",
+  "list": [
+    {
+      "name": "App Pokedex",
+      "position": "Desenvolvimento de aplicativo Android iOS nativo. Veja mais detalhes nos links do titulo!",
+      "startDate": "",
+      "endDate": "30/01/2023",
+      "description": "",
+      "projects": [
+        {
+          "title": {
+            "text": "Projeto final 1.0",
+            "githubLink": "https://github.com/felipermfalcao/App-Pokedex",
+            "otherLink": null
+          },
+          "imgUrl": "img/app_pokedex.jpg",
+          "description": "",
+          "startDate": "",
+          "endDate": "",
+          "which": ["Finalização", "Publicação na lojas", "Aguardando aprovação das lojas..."],
+          "techStack": ["React Native", "PokeApi", "Android", "iOS"]
+        }
+      ]
+    },
+    {
+      "name": "App Astro",
+      "position": "Desenvolvimento de aplicativo Android iOS nativo. Veja mais detalhes nos links do titulo!",
+      "startDate": "",
+      "endDate": "31/12/2022",
+      "description": "",
+      "projects": [
+        {
+          "title": {
+            "text": "Projeto pessoal de estudo",
+            "githubLink": "https://github.com/felipermfalcao/appAstro",
+            "otherLink": "https://play.google.com/store/apps/details?id=com.falcondev.appastro&hl=pt_BR&gl=US"
+          },
+          "imgUrl": "img/appAstro.jpg",
+          "description": "",
+          "startDate": "",
+          "endDate": "",
+          "which": ["App publicado!"],
+          "techStack": ["React Native", "Android", "iOS"]
+        }
+      ]
+    },
+    {
+      "name": "Site Valiant Seguros",
+      "position": "Desenvolvimento de site. Acesse o site no link do titulo.",
+      "startDate": "",
+      "endDate": "12/05/2021",
+      "description": "",
+      "projects": [
+        {
+          "title": {
+            "text": "Website",
+            "githubLink": "",
+            "otherLink": "https://valiantseguros.com/"
+          },
+          "imgUrl": "img/valiantSite1.jpg",
+          "description": "",
+          "startDate": "",
+          "endDate": "",
+          "which": ["Site publicado!"],
+          "techStack": ["HTML", "CSS", "JS"]
+        }
+      ]
+    },
+    {
+      "name": "Blog Valiant Seguros",
+      "position": "Desenvolvimento de blog. Acesse o blog no link do titulo.",
+      "startDate": "",
+      "endDate": "25/08/2021",
+      "description": "",
+      "projects": [
+        {
+          "title": {
+            "text": "Blog",
+            "githubLink": "",
+            "otherLink": "https://blog.valiantseguros.com/"
+          },
+          "imgUrl": "img/blogValiant1.jpg",
+          "description": "",
+          "startDate": "",
+          "endDate": "",
+          "which": ["Blog publicado!"],
+          "techStack": ["HTML", "CSS", "JS", "Wordpress"]
+        }
+      ]
+    },
+    {
+      "name": "Blog Guia do PC",
+      "position": "Desenvolvimento de blog. Acesse o blog no link do titulo.",
+      "startDate": "",
+      "endDate": "05/02/2020",
+      "description": "",
+      "projects": [
+        {
+          "title": {
+            "text": "Blog",
+            "githubLink": "",
+            "otherLink": "https://guiadopc.com.br/"
+          },
+          "imgUrl": "img/guiadopc.jpg",
+          "description": "",
+          "startDate": "",
+          "endDate": "",
+          "which": ["Blog publicado!"],
+          "techStack": ["HTML", "CSS", "JS", "Wordpress"]
+        }
+      ]
+    }
+  ]
+}

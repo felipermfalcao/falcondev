@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: felipefalcao.com.br/sitemap.xml
