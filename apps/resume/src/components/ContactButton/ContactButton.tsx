@@ -7,11 +7,22 @@ function ContactButton() {
   const { query } = useKBar();
   const isSmallButtonSize = useMediaQuery(650);
 
+  
+
   return (
     <Div>
-      <Button shadow color="primary" auto onClick={() => query.toggle()} size={isSmallButtonSize ? 'sm' : 'md'}>
-        Contact
+
+      {/* <a href="https://exemple.com.br" target="_blank"> */}
+      <Button style={{marginBottom: 10}} shadow color="secondary" auto onClick={() => alert('Em desenvolvimento...')}>
+        Blog
       </Button>
+      {/* </a> */}
+
+      <Button shadow color="primary" auto onClick={() => query.toggle()} size={isSmallButtonSize ? 'sm' : 'md'}>
+        Contato
+      </Button>
+
+      
     </Div>
   );
 }

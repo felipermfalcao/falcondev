@@ -9,14 +9,14 @@ export function Footer() {
   return (
     <StyledFooter>
       <span>
-        Copyright &copy; {date.getFullYear()}{' '}
+        Copyright &copy; 2010-{date.getFullYear()}{' '}
         <Link href={defaultUrl} target="_blank">
           {authorName}
         </Link>{' '}
-        All rights reserved.
+        Todos os direitos reservados.
       </span>
       <span>
-        Powered By{' '}
+        by{' '}
         <Link href="https://github.com/hyesungoh/comet-land" target="_blank">
           @Comet-land
         </Link>
