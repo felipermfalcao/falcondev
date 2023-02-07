@@ -6,6 +6,7 @@ export interface IProject {
     githubLink: string | null;
     otherLink: string | null;
   };
+  imgUrl: string,
   description: string;
   startDate: string;
   endDate: string;

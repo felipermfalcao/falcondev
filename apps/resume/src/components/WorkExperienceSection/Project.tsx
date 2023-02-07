@@ -5,14 +5,17 @@ import { IProject } from '../../../_content/Work-Experience';
 import Li from '../Li';
 import TitleTooltip from '../TitleTooltip';
 
-function Project({ title, description, startDate, endDate, which, techStack }: IProject) {
+function Project({ title, imgUrl, description, startDate, endDate, which, techStack }: IProject) {
   const { theme } = useTheme();
 
   return (
     <Div>
       <TitleTooltip {...title} />
-      <small>
-        {startDate} ~ {endDate}
+
+      <img style={{width: '80%'}} src={imgUrl}/>
+
+      <small style={{fontSize: 12}}>
+        {startDate} {endDate}
       </small>
       <span>{description}</span>
       {which.length > 0 && (

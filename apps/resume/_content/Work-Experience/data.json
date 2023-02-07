@@ -1,93 +1,113 @@
 {
-  "title": "Work Experience",
+  "title": "Projetos",
   "list": [
     {
-      "name": "Foo company",
-      "position": "Web Developer",
-      "startDate": "2021.03",
-      "endDate": "",
-      "description": "Foo company is social media company for every world",
+      "name": "App Pokedex",
+      "position": "Desenvolvimento de aplicativo Android iOS nativo. Veja mais detalhes nos links do titulo!",
+      "startDate": "",
+      "endDate": "30/01/2023",
+      "description": "",
       "projects": [
         {
           "title": {
-            "text": "Foo Pay",
-            "githubLink": null,
+            "text": "Projeto final 1.0",
+            "githubLink": "https://github.com/felipermfalcao/App-Pokedex",
             "otherLink": null
           },
-          "description": "Leading FE developers",
-          "startDate": "2022.01",
+          "imgUrl": "img/app_pokedex.jpg",
+          "description": "",
+          "startDate": "",
           "endDate": "",
-          "which": ["leading fe developers", "foster SEO"],
-          "techStack": ["TypeScript", "React", "Recoil"]
-        },
-        {
-          "title": {
-            "text": "Comet land",
-            "githubLink": "https://github.com/hyesungoh/comet-land",
-            "otherLink": "https://comet-land-blog.vercel.app"
-          },
-          "description": "Monorepo for blog and resume",
-          "startDate": "2021.6",
-          "endDate": "2021.12",
-          "which": ["construct monorepo with turborepo", "design with NextUI"],
-          "techStack": ["TypeScript", "React", "Next.js", "Turborepo", "NextUI", "Emotion"]
-        },
-        {
-          "title": {
-            "text": "Foo Eat",
-            "githubLink": null,
-            "otherLink": null
-          },
-          "description": "Leading FE developers",
-          "startDate": "2021.03",
-          "endDate": "2021.06",
-          "which": [
-            "develop comet-land",
-            "lorem lorem",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iusto quasi alias provident quos perspiciatis modi dolores libero tenetur nam?"
-          ],
-          "techStack": null
+          "which": ["Finalização", "Publicação na lojas", "Aguardando aprovação das lojas..."],
+          "techStack": ["React Native", "PokeApi", "Android", "iOS"]
         }
       ]
     },
     {
-      "name": "Bar company",
-      "position": "Web Developer",
-      "startDate": "2020.03",
-      "endDate": "2021.03",
-      "description": "Bar company is very awesome",
+      "name": "App Astro",
+      "position": "Desenvolvimento de aplicativo Android iOS nativo. Veja mais detalhes nos links do titulo!",
+      "startDate": "",
+      "endDate": "31/12/2022",
+      "description": "",
       "projects": [
         {
           "title": {
-            "text": "Bar Pay",
-            "githubLink": null,
-            "otherLink": null
+            "text": "Projeto pessoal de estudo",
+            "githubLink": "https://github.com/felipermfalcao/appAstro",
+            "otherLink": "https://play.google.com/store/apps/details?id=com.falcondev.appastro&hl=pt_BR&gl=US"
           },
-          "role": "FE Dev Leader",
-          "description": "Leading FE developers",
-          "startDate": "2020.08",
-          "endDate": "2021.03",
-          "which": [
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-            "Cum iusto quasi alias provident quos perspiciatis modi dolores libero tenetur nam?"
-          ],
-          "techStack": ["TypeScript", "React", "Recoil"]
-        },
+          "imgUrl": "img/appAstro.jpg",
+          "description": "",
+          "startDate": "",
+          "endDate": "",
+          "which": ["App publicado!"],
+          "techStack": ["React Native", "Android", "iOS"]
+        }
+      ]
+    },
+    {
+      "name": "Site Valiant Seguros",
+      "position": "Desenvolvimento de site. Acesse o site no link do titulo.",
+      "startDate": "",
+      "endDate": "12/05/2021",
+      "description": "",
+      "projects": [
         {
           "title": {
-            "text": "Bar Play",
-            "githubLink": null,
-            "otherLink": null
+            "text": "Website",
+            "githubLink": "",
+            "otherLink": "https://valiantseguros.com/"
           },
-          "role": "FE Dev Leader",
-          "description": "Leading FE developers",
-          "startDate": "2020.03",
-          "endDate": "2020.08",
-          "which": [
-            "perspiciatis modi dolores libero tenetur nam.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing."
-          ],
-          "techStack": ["TypeScript", "React", "Recoil"]
+          "imgUrl": "img/valiantSite1.jpg",
+          "description": "",
+          "startDate": "",
+          "endDate": "",
+          "which": ["Site publicado!"],
+          "techStack": ["HTML", "CSS", "JS"]
+        }
+      ]
+    },
+    {
+      "name": "Blog Valiant Seguros",
+      "position": "Desenvolvimento de blog. Acesse o blog no link do titulo.",
+      "startDate": "",
+      "endDate": "25/08/2021",
+      "description": "",
+      "projects": [
+        {
+          "title": {
+            "text": "Blog",
+            "githubLink": "",
+            "otherLink": "https://blog.valiantseguros.com/"
+          },
+          "imgUrl": "img/blogValiant1.jpg",
+          "description": "",
+          "startDate": "",
+          "endDate": "",
+          "which": ["Blog publicado!"],
+          "techStack": ["HTML", "CSS", "JS", "Wordpress"]
+        }
+      ]
+    },
+    {
+      "name": "Blog Guia do PC",
+      "position": "Desenvolvimento de blog. Acesse o blog no link do titulo.",
+      "startDate": "",
+      "endDate": "05/02/2020",
+      "description": "",
+      "projects": [
+        {
+          "title": {
+            "text": "Blog",
+            "githubLink": "",
+            "otherLink": "https://guiadopc.com.br/"
+          },
+          "imgUrl": "img/guiadopc.jpg",
+          "description": "",
+          "startDate": "",
+          "endDate": "",
+          "which": ["Blog publicado!"],
+          "techStack": ["HTML", "CSS", "JS", "Wordpress"]
         }
       ]
     }
