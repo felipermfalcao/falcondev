@@ -1,6 +1,6 @@
 {
-  "name": "comet-land",
-  "version": "0.0.1",
+  "name": "falcondev",
+  "version": "1.0.0",
   "private": true,
   "workspaces": [
     "apps/*",
