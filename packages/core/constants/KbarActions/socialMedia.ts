@@ -1,5 +1,5 @@
 import { openExternalLink } from '../../utils';
-import { facebookUrl, githubUrl, instagramUrl, linkedInUrl, twitterUrl } from '../SocialMedia';
+import { facebookUrl, githubUrl, instagramUrl, linkedInUrl, twitterUrl, whatsappUrl } from '../SocialMedia';
 import { IconActionType } from './type';
 
 function isValid(value: unknown) {
@@ -20,6 +20,17 @@ function pushActionWhenValid(value: string, action: IconActionType) {
   if (!isValid(value)) return;
   socialActions.push(action);
 }
+
+pushActionWhenValid(whatsappUrl, {
+  id: 'whatsapp',
+  name: 'Whatsapp',
+  subtitle: getSocialMediaId(whatsappUrl),
+  section: 'Social',
+  shortcut: [],
+  keywords: 'dm, whatsapp, contato',
+  icon: 'Whatsapp',
+  perform: () => openExternalLink(whatsappUrl),
+});
 
 pushActionWhenValid(githubUrl, {
   id: 'github',
