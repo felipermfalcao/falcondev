@@ -1,4 +1,0 @@
-{
-  "extends": "tsconfig/config-cypress.json",
-  "include": ["**/*.ts", "**/*.tsx"]
-}
