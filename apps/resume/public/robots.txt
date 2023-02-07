@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: felipefalcao.com.br/sitemap.xml
+Sitemap: https://comet-land-resume.vercel.app/sitemap.xml

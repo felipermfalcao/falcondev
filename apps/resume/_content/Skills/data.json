@@ -1,75 +1,45 @@
 {
-  "title": "Habilidades",
+  "title": "Skills",
   "list": [
     {
-      "name": "Habilidades interpessoais",
-      "descriptions": ["Tenho uma boa comunicação", "Sou muito honesto",
-                       "Sinto prazer em deixar o cliente satisfeito!"]
+      "name": "Soft skill",
+      "descriptions": ["I like to talk"]
     },
     {
       "name": "HTML/CSS",
       "descriptions": [
-        "Conhecimento avançado."
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, molestias.",
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quibusdam harum, nihil quidem ducimus explicabo soluta odio."
       ]
     },
     {
       "name": "JavaScript",
       "descriptions": [
-        "Conhecimento avançado."
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, molestias.",
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
       ]
     },
     {
       "name": "TypeScript",
       "descriptions": [
-        "Conhecimento básico."
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, molestias.",
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quibusdam harum, nihil quidem ducimus explicabo soluta odio ut voluptatem praesentium."
       ]
     },
     {
-      "name": "React e React Native",
+      "name": "Dev Ops",
       "descriptions": [
-        "Conhecimento intermediário."
-      ]
-    },
-    {
-      "name": "Next.js",
-      "descriptions": [
-        "Conhecimento básico."
-      ]
-    },
-    {
-      "name": "UI",
-      "descriptions": [
-        "Conhecimento intermediário."
-      ]
-    },
-    {
-      "name": "PHP",
-      "descriptions": [
-        "Conhecimento avançado."
-      ]
-    },
-    {
-      "name": "Laravel",
-      "descriptions": [
-        "Conhecimento intermediário."
-      ]
-    },
-    {
-      "name": "C#",
-      "descriptions": [
-        "Conhecimento básico."
-      ]
-    },
-    {
-      "name": "Hobbie",
-      "descriptions": [
-        "Manipulação de imagens", "Pós-produção", "Matte-painting"
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, molestias.",
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
       ]
     },
     {
       "name": "ETC",
       "descriptions": [
-        "Desiger Gráfico", "Photoshop"
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, molestias.",
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
       ]
     }
   ]

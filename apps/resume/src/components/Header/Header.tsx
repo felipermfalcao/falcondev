@@ -1,10 +1,9 @@
 import styled from '@emotion/styled';
-import { Avatar, Text, useTheme, Image } from '@nextui-org/react';
+import { Avatar, Text, useTheme } from '@nextui-org/react';
 import { ThemeSwitch } from 'core';
 import { authorImage, authorName } from 'core/constants';
 
 import { IHeader } from '../../../_content/Header';
-import Logo from '../Logo';
 
 function Header({ heading, description }: IHeader) {
   const { theme } = useTheme();
@@ -12,12 +11,9 @@ function Header({ heading, description }: IHeader) {
   return (
     <header>
       <HeadingWrapper>
-        <div style={{width: '70%'}}>
-        <Logo color={theme?.colors.accents2.value === '#333333' ? '#fff' : '#202021'}/>
-        </div>
-        {/* <H1 h1 css={{ textGradient: `45deg, ${theme.colors.text.value} 10%, ${theme.colors.primary.value} 60%` }}>
+        <H1 h1 css={{ textGradient: `45deg, ${theme.colors.text.value} 10%, ${theme.colors.primary.value} 60%` }}>
           {heading}
-        </H1> */}
+        </H1>
 
         <ThemeSwitch />
       </HeadingWrapper>

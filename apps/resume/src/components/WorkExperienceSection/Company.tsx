@@ -8,9 +8,9 @@ function Company({ name, position, startDate, endDate, description }: Omit<IComp
 
   return (
     <CompanyCard data-testid="wrapper">
-      <h3 style={{marginBottom: -2}}>{name}</h3>
-      <small style={{fontSize: 12, marginBottom: 10}}>
-        {startDate} {endDate}
+      <h3>{name}</h3>
+      <small>
+        {startDate} ~ {endDate}
       </small>
       <span>{position}</span>
       <P theme={theme}>{description}</P>
