@@ -18,16 +18,7 @@ import Footer from "@/components/Fotter";
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const {theme, setTheme} = useTheme('');
-
-  useEffect(() => {
-    function setaTema (){
-        setTheme('dark')
-    }
-
-    setaTema();
-  }, [Home]);
-
+  const {theme, setTheme} = useTheme('dark');
 
   return (
     <>

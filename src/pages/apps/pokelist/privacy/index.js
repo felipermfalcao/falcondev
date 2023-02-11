@@ -14,16 +14,7 @@ import PrivacyPokelist from "@/components/privacy/pokelist";
 const inter = Inter({ subsets: ['latin'] })
 
 export default function AppPokelistPrivacy() {
-  const {theme, setTheme} = useTheme('');
-
-  useEffect(() => {
-    function setaTema (){
-        setTheme('dark')
-    }
-
-    setaTema();
-  }, [AppPokelistPrivacy]);
-
+  const {theme, setTheme} = useTheme('dark');
 
   return (
     <>
