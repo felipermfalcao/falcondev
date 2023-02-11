@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { Card, Col, Row, Button, Text, Link, Modal, Image, Grid, Popover } from "@nextui-org/react";
 
 import { GitHubIcon } from "../Icons/github";
-import { PlayStoreIcon } from "../Icons/playstore";
+import { PlayStoreIcon } from "../Icons/playStore";
 import { AppStoreIcon } from "../Icons/appStore";
 
 import styles from '@/styles/Projetos.module.css'
