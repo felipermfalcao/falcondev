@@ -4,7 +4,7 @@ export default function PrivacyPokelist(){
         <h1>Privacy Policy | Pokelist</h1>
     <h2>English</h2>
     <div>
-        We at Falcon development value the privacy of our users and are committed to protecting their personal information. This privacy policy explains how we collect, use, and share users' information when using our mobile app.
+        We at Falcon development value the privacy of our users and are committed to protecting their personal information. This privacy policy explains how we collect, use, and share users information when using our mobile app.
     </div>
     <div>
         Information collected:
@@ -13,21 +13,21 @@ export default function PrivacyPokelist(){
         </ul>
     </div>
     <div>
-        How we use users' information:
+        How we use users information:
         <ul>
             <li>As we do not collect any information from our users, we are unable to use any information for any purpose.</li>
         </ul>
     </div>
     <div>
-        How we share users' information:
+        How we share users information:
         <ul>
-            <li>We do not share users' personal information with third parties, except when necessary to operate the app or comply with applicable laws and regulations.</li>
+            <li>We do not share users personal information with third parties, except when necessary to operate the app or comply with applicable laws and regulations.</li>
         </ul>
     </div>
     <div>
         Security:
         <ul>
-            <li>We take security measures to protect users' personal information from unauthorized access, misuse, and alteration.</li>
+            <li>We take security measures to protect users personal information from unauthorized access, misuse, and alteration.</li>
         </ul>
     </div>
     <div>
