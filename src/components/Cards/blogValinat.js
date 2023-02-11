@@ -51,7 +51,7 @@ export default function BlogValiant (){
                 objectFit="cover"
                 width="100%"
                 height="100%"
-                alt="App pokedex"
+                alt="Blog Valiant"
             />
             </Card.Body>
             <Card.Footer
@@ -123,6 +123,7 @@ export default function BlogValiant (){
                 height={571}
                 showSkeleton
                 src="img/projects/blogValiant/blogv1.png"
+                alt="Blog Valiant"
             />
 
         </Modal.Body>

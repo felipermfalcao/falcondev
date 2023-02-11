@@ -38,6 +38,7 @@ export default function Pokedex (){
                         height={45}
                         css={{borderRadius: 10}}
                         src="img/projects/pokedex/icon.jpg"
+                        alt="app Pokedex"
                     />
                     </div>
                 </Row>
@@ -140,6 +141,7 @@ export default function Pokedex (){
             <Image
                 showSkeleton
                 src="img/projects/pokedex/pokedex1.jpg"
+                alt="app Pokedex"
             />
         </Grid>
 
@@ -147,6 +149,7 @@ export default function Pokedex (){
             <Image
                 showSkeleton
                 src="img/projects/pokedex/pokedex2.jpg"
+                alt="app Pokedex"
             />
         </Grid>
 
@@ -154,6 +157,7 @@ export default function Pokedex (){
             <Image
                 showSkeleton
                 src="img/projects/pokedex/pokedex3.jpg"
+                alt="app Pokedex"
             />
         </Grid>
 
@@ -161,6 +165,7 @@ export default function Pokedex (){
             <Image
                 showSkeleton
                 src="img/projects/pokedex/pokedex4.jpg"
+                alt="app Pokedex"
             />
         </Grid>
         </Grid.Container>

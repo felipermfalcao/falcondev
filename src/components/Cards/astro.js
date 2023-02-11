@@ -38,6 +38,7 @@ export default function Astro (){
                         height={45}
                         css={{borderRadius: 10}}
                         src="img/projects/astro/icon.png"
+                        alt="App Astro"
                     />
                     </div>
                 </Row>
@@ -50,7 +51,7 @@ export default function Astro (){
                 objectFit="cover"
                 width="100%"
                 height="100%"
-                alt="App pokedex"
+                alt="App Astro"
             />
             </Card.Body>
             <Card.Footer
@@ -132,6 +133,7 @@ export default function Astro (){
             <Image
                 showSkeleton
                 src="img/projects/astro/astro.jpg"
+                alt="App Astro"
             />
         </Grid>
 
@@ -139,6 +141,7 @@ export default function Astro (){
             <Image
                 showSkeleton
                 src="img/projects/astro/astro2.jpg"
+                alt="App Astro"
             />
         </Grid>
 
@@ -146,6 +149,7 @@ export default function Astro (){
             <Image
                 showSkeleton
                 src="img/projects/astro/astro3.jpg"
+                alt="App Astro"
             />
         </Grid>
 
@@ -153,6 +157,7 @@ export default function Astro (){
             <Image
                 showSkeleton
                 src="img/projects/astro/astro4.jpg"
+                alt="App Astro"
             />
         </Grid>
 
@@ -160,6 +165,7 @@ export default function Astro (){
             <Image
                 showSkeleton
                 src="img/projects/astro/astro5.jpg"
+                alt="App Astro"
             />
         </Grid>
 
@@ -167,6 +173,7 @@ export default function Astro (){
             <Image
                 showSkeleton
                 src="img/projects/astro/astro6.jpg"
+                alt="App Astro"
             />
         </Grid>
         </Grid.Container>

@@ -51,7 +51,7 @@ export default function Valiant (){
                 objectFit="cover"
                 width="100%"
                 height="100%"
-                alt="App pokedex"
+                alt="Website Valiant Seguros"
             />
             </Card.Body>
             <Card.Footer
@@ -123,6 +123,7 @@ export default function Valiant (){
                 height={571}
                 showSkeleton
                 src="img/projects/valiant/valiant1.png"
+                alt="Website Valiant Seguros"
             />
 
         </Modal.Body>

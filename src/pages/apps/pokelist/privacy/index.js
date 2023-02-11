@@ -13,7 +13,7 @@ import PrivacyPokelist from "@/components/privacy/pokelist";
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function AppPokelistPrivacy() {
   const {theme, setTheme} = useTheme('');
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function Home() {
     }
 
     setaTema();
-  }, []);
+  }, [AppPokelistPrivacy]);
 
 
   return (
