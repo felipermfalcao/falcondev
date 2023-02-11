@@ -6,13 +6,26 @@ import '@/styles/globals.css'
 const lightTheme = createTheme({
   type: 'light',
   theme: {
-
+    colors:{
+      backgroundFotter: '#DAEBFC',
+      background: '#E4E4E7',
+      text: '#0F172A',
+      whatsApp: '#1AD03F',
+    }
   }
 })
 
 const darkTheme = createTheme({
   type: 'dark',
   theme: {
+    colors:{
+      backgroundFotter: '#421F3F',
+
+      background: '#16181A',
+      whatsApp: '#1AD03F',
+
+      gradient: 'linear-gradient(112deg, $blue100 -25%, $pink500 -10%, $purple500 80%)',
+    }
   }
 })
 

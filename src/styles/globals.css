@@ -1,3 +1,24 @@
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
+
+.nextui-navbar-container
+{
+    background: transparent !important;
+    backdrop-filter: none !important;
+}
+
+.nextui-navbar
+{
+    box-shadow: none !important;
+}
+
+#fixedTituloHome {
+    position: relative;
+  }
+
+#fixedTituloHome.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+  }

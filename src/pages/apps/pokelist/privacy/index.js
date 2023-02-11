@@ -1,19 +1,15 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
-import { Button } from '@nextui-org/react';
 import {useTheme} from 'next-themes'
 
-import Body from '@/components/Body'
+import Body from "@/components/Body";
 import Header from '@/components/Header'
 import ContainerPrincipal from '@/components/Container'
-import AvatarTop from '@/components/Avatar';
-import Projetos from "@/components/Projetos";
 import Contato from "@/components/Contato";
 import Footer from "@/components/Fotter";
+import PrivacyPokelist from "@/components/privacy/pokelist";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -41,9 +37,10 @@ export default function Home() {
       <Body tema={theme}>
         <ContainerPrincipal>
 
-        <Header /> 
-        <AvatarTop /> 
-        <Projetos />
+        <Header />
+        
+        <PrivacyPokelist />
+
         <Contato />
         <Footer />
 

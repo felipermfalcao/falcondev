@@ -1,5 +1,9 @@
-export default function Container({ children }){
+import { Container, Card, Row, Text, Col, Spacer } from "@nextui-org/react";
+
+export default function ContainerPrincipal({ children }){
     return(
-        <div>{ children }</div>
+        <Container gap={0} xs>
+            { children }
+        </Container>
     );
 }
