@@ -22,15 +22,6 @@ export default function Home() {
   return (
     <>
       <Head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFK2E7447D"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date());
-
-          gtag('config', 'G-FFK2E7447D');
-        </script>
-
         <title>Falcondev</title>
         <meta name="description" content="Site pessoal e blog construído com React e Next.js, hospedado na plataforma Vercel." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
