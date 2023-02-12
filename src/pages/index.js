@@ -26,6 +26,13 @@ export default function Home() {
         <title>Falcondev</title>
         <meta name="description" content="Site pessoal e blog construído com React e Next.js, hospedado na plataforma Vercel." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta property="og:url" content="https://dev.felipefalcao.com.br" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Falcon Dev" />
+        <meta property="og:description" content="Site pessoal e blog construído com React e Next.js, hospedado na plataforma Vercel." />
+        <meta property="og:image" content="img/avatar.jpg" />
+        
         <link rel="icon" href="/favicon.png" />
       </Head>
 
