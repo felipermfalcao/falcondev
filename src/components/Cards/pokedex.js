@@ -37,6 +37,7 @@ export default function Pokedex (){
                         width={45}
                         height={45}
                         css={{borderRadius: 10}}
+                        srcSet="img/projects/pokedex/icon.webp"
                         src="img/projects/pokedex/icon.jpg"
                         alt="app Pokedex"
                     />
@@ -47,6 +48,7 @@ export default function Pokedex (){
             <Card.Body css={{ p: 0, overflow: 'hidden' }}>
             <Card.Image
                 className={styles.project1}
+                srcSet="img/projects/pokedex/pokedex_bg.webp"
                 src="img/projects/pokedex/pokedex_bg.png"
                 objectFit="cover"
                 width="100%"
@@ -80,6 +82,7 @@ export default function Pokedex (){
                     auto
                     flat                    
                     color="primary"
+                    alt="Link Playstore para o aplicativo"
                     icon={<PlayStoreIcon fill="currentColor" filled />}
                     >Play Store</Button>
                     </Popover.Trigger>
@@ -98,6 +101,7 @@ export default function Pokedex (){
                     auto
                     flat                    
                     color="primary"
+                    alt="Link AppStore para o aplicativo"
                     icon={<AppStoreIcon fill="currentColor" filled />}
                     >App Store</Button>
                     </Popover.Trigger>
@@ -115,6 +119,7 @@ export default function Pokedex (){
                     auto
                     flat                    
                     color="secondary"
+                    alt="Link para o Github"
                     icon={<GitHubIcon fill="currentColor" filled />}
                     />
                 </Link>
@@ -141,6 +146,7 @@ export default function Pokedex (){
             <Image
                 showSkeleton
                 src="img/projects/pokedex/pokedex1.jpg"
+                srcSet="img/projects/pokedex/pokedex1.webp"
                 alt="app Pokedex"
             />
         </Grid>
@@ -149,6 +155,7 @@ export default function Pokedex (){
             <Image
                 showSkeleton
                 src="img/projects/pokedex/pokedex2.jpg"
+                srSet="img/projects/pokedex/pokedex2.webp"
                 alt="app Pokedex"
             />
         </Grid>
@@ -157,6 +164,7 @@ export default function Pokedex (){
             <Image
                 showSkeleton
                 src="img/projects/pokedex/pokedex3.jpg"
+                srcSet="img/projects/pokedex/pokedex3.webp"
                 alt="app Pokedex"
             />
         </Grid>
@@ -165,6 +173,7 @@ export default function Pokedex (){
             <Image
                 showSkeleton
                 src="img/projects/pokedex/pokedex4.jpg"
+                srcSet="img/projects/pokedex/pokedex4.webp"
                 alt="app Pokedex"
             />
         </Grid>
@@ -172,7 +181,7 @@ export default function Pokedex (){
 
         </Modal.Body>
         <Modal.Footer>
-        <Button auto flat color="primary" onPress={fecharModalPokedex}>
+        <Button auto flat color="primary" alt="Fechar Modal" onPress={fecharModalPokedex}>
             Fechar
           </Button>
         </Modal.Footer>

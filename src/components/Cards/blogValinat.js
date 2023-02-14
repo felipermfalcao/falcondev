@@ -46,6 +46,7 @@ export default function BlogValiant (){
             <Card.Image
                 className={styles.project4}
                 src="img/projects/blogValiant/blogValiant_bg.png"
+                srcSet="img/projects/blogValiant/blogValiant_bg.webp"
                 objectFit="cover"
                 width="100%"
                 height="100%"
@@ -74,6 +75,7 @@ export default function BlogValiant (){
                     auto
                     flat                    
                     color="primary"
+                    alt="Link para o blog da Valiant Seguros"
                     icon={<LinkIcon fill="currentColor" filled />}
                     >Website</Button>
                 </Link>
@@ -92,6 +94,7 @@ export default function BlogValiant (){
                     auto
                     flat                    
                     color="secondary"
+                    alt="Link para GitHub não disponível"
                     icon={<GitHubIcon fill="currentColor" filled />}
                     />
                 </Popover.Trigger>
@@ -121,12 +124,13 @@ export default function BlogValiant (){
                 height={571}
                 showSkeleton
                 src="img/projects/blogValiant/blogv1.png"
+                srcSet="img/projects/blogValiant/blogv1.webp"
                 alt="Blog Valiant"
             />
 
         </Modal.Body>
         <Modal.Footer>
-        <Button auto flat color="primary" onPress={fecharModalPokedex}>
+        <Button auto flat color="primary" alt="Fechar Modal" onPress={fecharModalPokedex}>
             Fechar
           </Button>
         </Modal.Footer>

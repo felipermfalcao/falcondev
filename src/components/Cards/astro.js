@@ -38,6 +38,7 @@ export default function Astro (){
                         height={45}
                         css={{borderRadius: 10}}
                         src="img/projects/astro/icon.png"
+                        srcSet="img/projects/astro/icon.webp"
                         alt="App Astro"
                     />
                     </div>
@@ -48,6 +49,7 @@ export default function Astro (){
             <Card.Image
                 className={styles.project2}
                 src="img/projects/astro/astro_bg.png"
+                srcSet="img/projects/astro/astro_bg.webp"
                 objectFit="cover"
                 width="100%"
                 height="100%"
@@ -76,6 +78,7 @@ export default function Astro (){
                     auto
                     flat                    
                     color="primary"
+                    alt="Link para PlayStore"
                     icon={<PlayStoreIcon fill="currentColor" filled />}
                     >Play Store</Button>
                 </Link>
@@ -90,6 +93,7 @@ export default function Astro (){
                     auto
                     flat                    
                     color="primary"
+                    alt="Link para AppStore"
                     icon={<AppStoreIcon fill="currentColor" filled />}
                     >App Store</Button>
                     </Popover.Trigger>
@@ -107,6 +111,7 @@ export default function Astro (){
                     auto
                     flat                    
                     color="secondary"
+                    alt="Link para Github"
                     icon={<GitHubIcon fill="currentColor" filled />}
                     />
                 </Link>
@@ -133,6 +138,7 @@ export default function Astro (){
             <Image
                 showSkeleton
                 src="img/projects/astro/astro.jpg"
+                srcSet="img/projects/astro/astro.webp"
                 alt="App Astro"
             />
         </Grid>
@@ -141,6 +147,7 @@ export default function Astro (){
             <Image
                 showSkeleton
                 src="img/projects/astro/astro2.jpg"
+                srcSet="img/projects/astro/astro2.webp"
                 alt="App Astro"
             />
         </Grid>
@@ -149,6 +156,7 @@ export default function Astro (){
             <Image
                 showSkeleton
                 src="img/projects/astro/astro3.jpg"
+                srcSet="img/projects/astro/astro3.webp"
                 alt="App Astro"
             />
         </Grid>
@@ -157,6 +165,7 @@ export default function Astro (){
             <Image
                 showSkeleton
                 src="img/projects/astro/astro4.jpg"
+                srcSet="img/projects/astro/astro4.webp"
                 alt="App Astro"
             />
         </Grid>
@@ -165,6 +174,7 @@ export default function Astro (){
             <Image
                 showSkeleton
                 src="img/projects/astro/astro5.jpg"
+                srcSet="img/projects/astro/astro5.webp"
                 alt="App Astro"
             />
         </Grid>
@@ -173,6 +183,7 @@ export default function Astro (){
             <Image
                 showSkeleton
                 src="img/projects/astro/astro6.jpg"
+                srcSet="img/projects/astro/astro6.webp"
                 alt="App Astro"
             />
         </Grid>
@@ -180,7 +191,7 @@ export default function Astro (){
 
         </Modal.Body>
         <Modal.Footer>
-        <Button auto flat color="primary" onPress={fecharModalPokedex}>
+        <Button auto flat color="primary" alt="Fechar Modal" onPress={fecharModalPokedex}>
             Fechar
           </Button>
         </Modal.Footer>

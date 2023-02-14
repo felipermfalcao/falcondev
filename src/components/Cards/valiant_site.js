@@ -46,6 +46,7 @@ export default function Valiant (){
             <Card.Image
                 className={styles.project3}
                 src="img/projects/valiant/valiant_bg.png"
+                srcSet="img/projects/valiant/valiant_bg.webp"
                 objectFit="cover"
                 width="100%"
                 height="100%"
@@ -74,6 +75,7 @@ export default function Valiant (){
                     auto
                     flat                    
                     color="primary"
+                    alt="Site da Valiant Seguros"
                     icon={<LinkIcon fill="currentColor" filled />}
                     >Website</Button>
                 </Link>
@@ -92,6 +94,7 @@ export default function Valiant (){
                     auto
                     flat                    
                     color="secondary"
+                    alt="Github não disponível"
                     icon={<GitHubIcon fill="currentColor" filled />}
                     />
                 </Popover.Trigger>
@@ -121,12 +124,13 @@ export default function Valiant (){
                 height={571}
                 showSkeleton
                 src="img/projects/valiant/valiant1.png"
+                srcSet="img/projects/valiant/valiant1.webp"
                 alt="Website Valiant Seguros"
             />
 
         </Modal.Body>
         <Modal.Footer>
-        <Button auto flat color="primary" onPress={fecharModalPokedex}>
+        <Button auto flat color="primary" alt="Fechar Modal" onPress={fecharModalPokedex}>
             Fechar
           </Button>
         </Modal.Footer>

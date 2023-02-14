@@ -14,11 +14,13 @@ export default function AvatarTop(){
                 <Avatar
                 style={{boxShadow:'0px 6px 15px #0952a5'}}
                 size="xl"
+                srcSet="img/avatar.webp"
                 src="img/avatar.jpg"
                 bordered
                 color="primary"
                 zoomed
                 pointer
+                alt="Imagem do Felipe Falcão"
                 //onClick={() => alert('tsete')}
                 />
             </Tooltip>

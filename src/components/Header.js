@@ -19,6 +19,7 @@ export default function Header(props){
 
                     <div style={{alignSelf:'center', paddingRight: 5}}>
                     <Switch
+                        aria-label="Altenar entre modo Claro e Escuro"
                         checked={true}
                         size="md"
                         color="primary"
