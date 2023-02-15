@@ -1,7 +1,7 @@
 export default function PrivacyPokelist(){
     return(
         <div>
-        <h1>Privacy Policy | Pokelist</h1>
+        <h1>Privacy Policy | BulbaDex</h1>
     <h2>English</h2>
     <div>
         We at Falcon development value the privacy of our users and are committed to protecting their personal information. This privacy policy explains how we collect, use, and share users information when using our mobile app.
@@ -43,7 +43,7 @@ export default function PrivacyPokelist(){
         </ul>
     </div>
 
-    <h1>Política de Privacidade | Pokelist</h1>
+    <h1>Política de Privacidade | BulbaDex</h1>
     <h2>Português</h2>
     <div>
       Nós da Falcon development valorizamos a privacidade de nossos usuários e estamos comprometidos em proteger suas informações pessoais. Esta política de privacidade explica como coletamos, usamos e compartilhamos as informações dos usuários ao usar nosso aplicativo móvel.
