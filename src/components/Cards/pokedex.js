@@ -72,11 +72,7 @@ export default function Pokedex (){
             <Row>
                 <Col>
                 <Row justify="space-evenly">
-                <Popover
-                isBordered
-                placement="top"
-                >
-                <Popover.Trigger>
+                <Link href="https://play.google.com/store/apps/details?id=com.falcondev.bulbadex" target={'_blank'}> 
                     <Button
                     css={{marginRight: 5, paddingLeft: 10, paddingRight: 10}}
                     auto
@@ -85,11 +81,7 @@ export default function Pokedex (){
                     alt="Link Playstore para o aplicativo"
                     icon={<PlayStoreIcon fill="currentColor" filled />}
                     >Play Store</Button>
-                    </Popover.Trigger>
-                    <Popover.Content>
-                        <Text css={{ p: "$5" }}>Em aprovação na loja...</Text>
-                    </Popover.Content>
-                </Popover>
+                </Link>
                 
                 <Popover
                 isBordered
