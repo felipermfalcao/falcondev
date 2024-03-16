@@ -33,6 +33,12 @@ export const Project = defineDocumentType(() => ({
 			type: "string",
 			required: true,
 		},
+		imgUrl: {
+			type: "string",
+		},
+		imgDescription: {
+			type: "string",
+		},
 		date: {
 			type: "date",
 		},

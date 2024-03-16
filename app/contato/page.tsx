@@ -1,27 +1,27 @@
 "use client";
-import { Github, Mail, Twitter } from "lucide-react";
+import { IoLogoWhatsapp, IoMailOutline  } from "react-icons/io5";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 
 const socials = [
+	// {
+	// 	icon: <Twitter size={20} />,
+	// 	href: "https://twitter.com/felipermfalcao",
+	// 	label: "Twitter",
+	// 	handle: "@felipermfalcao",
+	// },
 	{
-		icon: <Twitter size={20} />,
-		href: "https://twitter.com/chronark_",
-		label: "Twitter",
-		handle: "@chronark_",
+		icon: <IoLogoWhatsapp size={20} />,
+		href: "https://bit.ly/devfalcon",
+		label: "Whatsapp",
+		handle: "+55 (85) 98751-7076",
 	},
 	{
-		icon: <Mail size={20} />,
-		href: "mailto:dev@chronark.com",
+		icon: <IoMailOutline size={20} />,
+		href: "mailto:contato@felipefalcao.com.br",
 		label: "Email",
-		handle: "dev@chronark.com",
-	},
-	{
-		icon: <Github size={20} />,
-		href: "https://github.com/chronark",
-		label: "Github",
-		handle: "chronark",
+		handle: "contato@felipefalcao.com.br",
 	},
 ];
 
@@ -30,7 +30,7 @@ export default function Example() {
 		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
 			<Navigation />
 			<div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
-				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
+				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-2 lg:gap-16">
 					{socials.map((s) => (
 						<Card>
 							<Link

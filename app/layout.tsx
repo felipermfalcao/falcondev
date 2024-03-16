@@ -6,24 +6,24 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "chronark.com",
-    template: "%s | chronark.com",
+    default: "falcondev",
+    template: "%s | falcondev",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "Meu nome é Felipe Falcão, sou desenvolvedor full stack de aplicativos Android e iOS nativos e sistemas web.",
   openGraph: {
-    title: "chronark.com",
+    title: "falcondev",
     description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+      "Meu nome é Felipe Falcão, sou desenvolvedor full stack de aplicativos Android e iOS nativos e sistemas web.",
+    url: "https://felipefalcao.com.br",
+    siteName: "felipefalcao.com.br",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "https://felipefalcao.com.br/og.png",
         width: 1920,
         height: 1080,
       },
     ],
-    locale: "en-US",
+    locale: "pt-BR",
     type: "website",
   },
   robots: {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Chronark",
+    title: "",
     card: "summary_large_image",
   },
   icons: {
@@ -61,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
+    <html lang="pt-br" className={[inter.variable, calSans.variable].join(" ")}>
       <head>
         <Analytics />
       </head>
