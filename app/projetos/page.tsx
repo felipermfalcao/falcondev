@@ -22,7 +22,7 @@ export default async function ProjectsPage() {
 
   const featured = allProjects.find((project) => project.slug === "clubeValiant")!;
   const top2 = allProjects.find((project) => project.slug === "bulbaDex")!;
-  const top3 = allProjects.find((project) => project.slug === "astro")!;
+  const top3 = allProjects.find((project) => project.slug === "akko")!;
   const sorted = allProjects
     .filter((p) => p.published)
     .filter(
@@ -46,7 +46,7 @@ export default async function ProjectsPage() {
             Projetos
           </h2>
           <p className="mt-4 text-zinc-400">
-             Alguns dos projetos são de trabalho e outros são pessoais.
+             Alguns dos meus principais projetos.
           </p>
         </div>
         <div className="w-full h-px bg-zinc-800" />
@@ -55,25 +55,26 @@ export default async function ProjectsPage() {
           <Card>
             <Link href={`/projetos/${featured.slug}`}>
               <article className="relative w-full h-full p-4 md:p-8">
-                <div className="flex items-center justify-between gap-2">
-                  <div className="text-xs text-zinc-100">
-                    {featured.date ? (
-                      <time dateTime={new Date(featured.date).toISOString()}>
-                        {Intl.DateTimeFormat(undefined, {
-                          dateStyle: "medium",
-                        }).format(new Date(featured.date))}
-                      </time>
-                    ) : (
-                      <span>EM BREVE</span>
-                    )}
-                  </div>
-                  <span className="flex items-center gap-1 text-xs text-zinc-500">
-                    <Eye className="w-4 h-4" />{" "}
-                    {Intl.NumberFormat("pt-BR", { notation: "compact" }).format(
-                      views[featured.slug] ?? 0,
-                    )}
-                  </span>
-                </div>
+              <div className="flex items-center justify-between gap-2">
+                {/* <div className="text-xs text-zinc-100">
+                  {featured.date ? (
+                    <time dateTime={new Date(featured.date).toISOString()}>
+                      {Intl.DateTimeFormat(undefined, {
+                        dateStyle: "medium",
+                      }).format(new Date(featured.date))}
+                    </time>
+                  ) : (
+                    <span>EM BREVE</span>
+                  )}
+                </div> */}
+                <span className="flex items-center gap-1 text-xs text-zinc-500 ml-auto">
+                  <Eye className="w-4 h-4" />{" "}
+                  {Intl.NumberFormat("pt-BR", { notation: "compact" }).format(
+                    views[featured.slug] ?? 0
+                  )}
+                </span>
+              </div>
+
                 
                 <div className="flex flex-col md:flex-row items-center">
                   <div>
