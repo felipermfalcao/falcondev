@@ -1,47 +1,68 @@
 import { Redis } from "@upstash/redis";
-import { NextRequest, NextResponse } from "next/server";
+import type { NextApiRequest, NextApiResponse } from "next";
+import crypto from "crypto";
 
-const redis = Redis.fromEnv();
-export const config = {
-  runtime: "edge",
-};
+const redis = process.env.UPSTASH_REDIS_REST_URL
+  ? Redis.fromEnv()
+  : null;
 
-export default async function incr(req: NextRequest): Promise<NextResponse> {
+export default async function incr(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method !== "POST") {
-    return new NextResponse("use POST", { status: 405 });
-  }
-  if (req.headers.get("Content-Type") !== "application/json") {
-    return new NextResponse("must be json", { status: 400 });
+    return res.status(405).json({ error: "use POST" });
   }
 
-  const body = await req.json();
-  let slug: string | undefined = undefined;
-  if ("slug" in body) {
-    slug = body.slug;
+  if (req.headers["content-type"] !== "application/json") {
+    return res.status(400).json({ error: "must be json" });
   }
+
+  const { slug } = req.body;
+
   if (!slug) {
-    return new NextResponse("Slug not found", { status: 400 });
+    return res.status(400).json({ error: "Slug not found" });
   }
-  const ip = req.ip;
-  if (ip) {
-    // Hash the IP in order to not store it directly in your db.
-    const buf = await crypto.subtle.digest(
-      "SHA-256",
-      new TextEncoder().encode(ip),
-    );
-    const hash = Array.from(new Uint8Array(buf))
-      .map((b) => b.toString(16).padStart(2, "0"))
-      .join("");
 
-    // deduplicate the ip for each slug
-    const isNew = await redis.set(["deduplicate", hash, slug].join(":"), true, {
-      nx: true,
-      ex: 24 * 60 * 60,
-    });
-    if (!isNew) {
-      new NextResponse(null, { status: 202 });
-    }
+  // Se Redis não estiver configurado, retorna sucesso silenciosamente
+  if (!redis) {
+    return res.status(202).json({ success: true });
   }
-  await redis.incr(["pageviews", "projects", slug].join(":"));
-  return new NextResponse(null, { status: 202 });
+
+  try {
+    // Get IP address
+    const forwarded = req.headers["x-forwarded-for"];
+    const ip = typeof forwarded === "string"
+      ? forwarded.split(",")[0]
+      : req.socket.remoteAddress;
+
+    if (ip) {
+      // Hash the IP in order to not store it directly in your db.
+      const hash = crypto
+        .createHash("sha256")
+        .update(ip)
+        .digest("hex");
+
+      // deduplicate the ip for each slug
+      const isNew = await redis.set(
+        ["deduplicate", hash, slug].join(":"),
+        true,
+        {
+          nx: true,
+          ex: 24 * 60 * 60,
+        }
+      );
+
+      if (!isNew) {
+        return res.status(202).json({ success: true });
+      }
+    }
+
+    await redis.incr(["pageviews", "projects", slug].join(":"));
+    return res.status(202).json({ success: true });
+  } catch (error) {
+    console.error("Redis error:", error);
+    // Silently fail if Redis is not configured
+    return res.status(202).json({ success: true });
+  }
 }

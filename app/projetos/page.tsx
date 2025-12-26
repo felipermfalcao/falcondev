@@ -1,41 +1,56 @@
 import Link from "next/link";
 import React from "react";
-import { allProjects } from "contentlayer/generated";
+import { getAllProjects } from "@/lib/projects";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
 import { Redis } from "@upstash/redis";
 import { Eye } from "lucide-react";
 
-const redis = Redis.fromEnv();
+const redis = process.env.UPSTASH_REDIS_REST_URL
+  ? Redis.fromEnv()
+  : null;
 
-export const revalidate = 60;
+export const revalidate = false;
 export default async function ProjectsPage() {
-  const views = (
-    await redis.mget<number[]>(
-      ...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":")),
-    )
-  ).reduce((acc, v, i) => {
-    acc[allProjects[i].slug] = v ?? 0;
-    return acc;
-  }, {} as Record<string, number>);
+  const allProjects = await getAllProjects();
+  let views: Record<string, number> = {};
 
-  const featured = allProjects.find((project) => project.slug === "clubeValiant")!;
-  const top2 = allProjects.find((project) => project.slug === "bulbaDex")!;
-  const top3 = allProjects.find((project) => project.slug === "akko")!;
-  const sorted = allProjects
+  if (redis) {
+    try {
+      const viewsData = await redis.mget<number[]>(
+        ...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":")),
+      );
+      views = viewsData.reduce((acc, v, i) => {
+        acc[allProjects[i].slug] = v ?? 0;
+        return acc;
+      }, {} as Record<string, number>);
+    } catch (error) {
+      // Fallback em caso de erro
+      console.log("Redis error, using fallback views");
+      views = allProjects.reduce((acc, p) => {
+        acc[p.slug] = 0;
+        return acc;
+      }, {} as Record<string, number>);
+    }
+  } else {
+    // Sem Redis configurado
+    views = allProjects.reduce((acc, p) => {
+      acc[p.slug] = 0;
+      return acc;
+    }, {} as Record<string, number>);
+  }
+
+  // Ordenar projetos publicados por order e pegar os 3 primeiros como destaques
+  const publishedProjects = allProjects
     .filter((p) => p.published)
-    .filter(
-      (project) =>
-        project.slug !== featured.slug &&
-        project.slug !== top2.slug &&
-        project.slug !== top3.slug,
-    )
-    .sort(
-      (a, b) =>
-        new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
-        new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
-    );
+    .sort((a, b) => a.order - b.order);
+
+  const featured = publishedProjects[0]; // Primeiro projeto = featured (grande)
+  const top2 = publishedProjects[1];     // Segundo projeto = top2 (médio)
+  const top3 = publishedProjects[2];     // Terceiro projeto = top3 (médio)
+
+  const sorted = publishedProjects.slice(3); // Do quarto em diante = grid normal
 
   return (
     <div className="relative pb-16">
@@ -51,6 +66,7 @@ export default async function ProjectsPage() {
         </div>
         <div className="w-full h-px bg-zinc-800" />
 
+        {featured && (
         <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
           <Card>
             <Link href={`/projetos/${featured.slug}`}>
@@ -109,13 +125,14 @@ export default async function ProjectsPage() {
           </Card>
 
           <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
-            {[top2, top3].map((project) => (
-              <Card key={project.slug}>
-                <Article project={project} views={views[project.slug] ?? 0} />
+            {[top2, top3].filter(Boolean).map((project) => (
+              <Card key={project!.slug}>
+                <Article project={project!} views={views[project!.slug] ?? 0} />
               </Card>
             ))}
           </div>
         </div>
+        )}
         <div className="hidden w-full h-px md:block bg-zinc-800" />
 
         <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3">

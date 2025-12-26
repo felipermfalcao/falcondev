@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
-import { allProjects } from "contentlayer/generated";
+import { getAllProjects, getProjectBySlug } from "@/lib/projects";
 import { Mdx } from "@/app/components/mdx";
 import { Header } from "./header";
 import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
 
-export const revalidate = 60;
+export const revalidate = false;
 
 type Props = {
   params: {
@@ -14,9 +14,12 @@ type Props = {
   };
 };
 
-const redis = Redis.fromEnv();
+const redis = process.env.UPSTASH_REDIS_REST_URL
+  ? Redis.fromEnv()
+  : null;
 
 export async function generateStaticParams(): Promise<Props["params"][]> {
+  const allProjects = await getAllProjects();
   return allProjects
     .filter((p) => p.published)
     .map((p) => ({
@@ -26,23 +29,33 @@ export async function generateStaticParams(): Promise<Props["params"][]> {
 
 export default async function PostPage({ params }: Props) {
   const slug = params?.slug;
-  const project = allProjects.find((project) => project.slug === slug);
+  const project = await getProjectBySlug(slug);
 
   if (!project) {
     notFound();
   }
 
-  const views =
-    (await redis.get<number>(["pageviews", "projects", slug].join(":"))) ?? 0;
+  let views = 0;
+  if (redis) {
+    try {
+      views = (await redis.get<number>(["pageviews", "projects", slug].join(":"))) ?? 0;
+    } catch (error) {
+      console.log("Redis error, using fallback views");
+      views = 0;
+    }
+  }
 
   return (
-    <div className="bg-zinc-50 min-h-screen">
+    <div className="min-h-screen bg-gradient-to-tl from-black via-zinc-900 to-black">
       <Header project={project} views={views} />
       <ReportView slug={project.slug} />
 
-      <article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
-        <Mdx code={project.body.code} />
-      </article>
+      {/* Conteúdo MDX - COMENTADO (parte que antes era branca) */}
+      {/* <div className="container mx-auto px-6 lg:px-8 pb-24">
+        <article className="mx-auto prose prose-invert prose-zinc prose-quoteless max-w-4xl">
+          <Mdx code={project.body.code} />
+        </article>
+      </div> */}
     </div>
   );
 }
