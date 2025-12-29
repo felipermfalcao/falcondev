@@ -181,7 +181,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 										const isAppStore = link.label === "App Store" || link.href.includes("apps.apple.com");
 
 										// Selecionar ícone apropriado
-										let Icon = ExternalLink;
+										let Icon: React.ComponentType<any> = ExternalLink;
 										let subtitle = "Projeto ao vivo";
 
 										if (isGithub) {

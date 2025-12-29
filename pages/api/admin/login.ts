@@ -31,7 +31,7 @@ export default async function handler(
       // Criar cookie de autenticação
       const cookie = serialize("admin_auth", "authenticated", {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
+        secure: (process.env.NODE_ENV as string) === "production",
         sameSite: "strict",
         maxAge: 60 * 60 * 24 * 7, // 7 dias
         path: "/",
@@ -51,7 +51,7 @@ export default async function handler(
     // Criar cookie de autenticação
     const cookie = serialize("admin_auth", "authenticated", {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: (process.env.NODE_ENV as string) === "production",
       sameSite: "strict",
       maxAge: 60 * 60 * 24 * 7, // 7 dias
       path: "/",
